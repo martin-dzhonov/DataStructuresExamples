@@ -1,0 +1,2 @@
+c:\users\martin\documents\visual studio 2013\Projects\DataStructuresExamples\DataStructuresExamples\bin\Debug\DataStructuresExamples.exe.config
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\DataStructuresExamples\bin\Debug\DataStructuresExamples.exe.config
