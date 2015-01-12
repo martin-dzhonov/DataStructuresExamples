@@ -8,31 +8,31 @@ namespace LinkedList
 {
     class SinglyLinkedList<T>
     {
-        public SimpleNode<T> First { get; set; }
+        public BasicNode<T> First { get; set; }
 
         public SinglyLinkedList()
         {
             this.First = null;
         }
 
-        public void AddFirst(SimpleNode<T> node)
+        public SinglyLinkedList(BasicNode<T> node)
+        {
+            this.First = node;
+        }
+
+        public void InsertFirst(BasicNode<T> node)
         {
             node.Next = this.First;
             this.First = node;
         }
 
-        public SinglyLinkedList(SimpleNode<T> node)
-        {
-            this.First = node;
-        }
-
-        public void InsertAfter(SimpleNode<T> node, SimpleNode<T> newNode)
+        public void InsertAfter(BasicNode<T> node, BasicNode<T> newNode)
         {
             newNode.Next = node.Next;
             node.Next = newNode;
         }
 
-        public void InsertBefore(SimpleNode<T> node, SimpleNode<T> newNode)
+        public void InsertBefore(BasicNode<T> node, BasicNode<T> newNode)
         {      
             newNode.Next = node;
             if (node == this.First)

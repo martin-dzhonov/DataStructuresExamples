@@ -10,22 +10,23 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            SimpleNode<string> honda = new SimpleNode<string>("Honda");
-            SimpleNode<string> bmw = new SimpleNode<string>("BMW");
-            SimpleNode<string> mercedes = new SimpleNode<string>("Mercedes");
+            BasicNode<string> honda = new BasicNode<string>("Honda");
+            BasicNode<string> bmw = new BasicNode<string>("BMW");
+            BasicNode<string> mercedes = new BasicNode<string>("Mercedes");
 
             SinglyLinkedList<string> singlyLinkedList = new SinglyLinkedList<string>();
 
-            singlyLinkedList.AddFirst(honda);
+            singlyLinkedList.InsertFirst(honda);
             singlyLinkedList.InsertAfter(honda, bmw);
             singlyLinkedList.InsertAfter(bmw, mercedes);
 
-            SimpleNode<string> node = singlyLinkedList.First;
-            while (node != null)
+            BasicNode<string> basicNode = singlyLinkedList.First;
+            while (basicNode != null)
             {
-                Console.WriteLine(node.Value);
-                node = node.Next;
+                Console.WriteLine(basicNode.Value);
+                basicNode = basicNode.Next;
             }
+
         }
     }
 }
