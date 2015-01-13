@@ -10,25 +10,90 @@ namespace Trees
     {
         static void Main(string[] args)
         {
-            BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>();
-            binarySearchTree.Insert(5);
-            binarySearchTree.Insert(10);
-            binarySearchTree.Insert(2);
-            binarySearchTree.Insert(15);
-            binarySearchTree.Insert(12);
+            BinarySearchTree<string> binarySearchTree = new BinarySearchTree<string>();
 
-            Traverse(binarySearchTree.Root);
+            binarySearchTree.Insert("F");
+            binarySearchTree.Insert("B");
+            binarySearchTree.Insert("G");
+            binarySearchTree.Insert("A");
+            binarySearchTree.Insert("D");
+            binarySearchTree.Insert("I");
+            binarySearchTree.Insert("C");
+            binarySearchTree.Insert("E");
+            binarySearchTree.Insert("H");
+            //tree pic: http://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg
+
+            Console.WriteLine("Pre-order traversal(DFS)");
+            PreOrderTraversal(binarySearchTree.Root);
+            Console.WriteLine("-------------------");
+
+            Console.WriteLine("In-order traversal(DFS)");
+            InOrderTraversal(binarySearchTree.Root);
+            Console.WriteLine("-------------------");
+
+            Console.WriteLine("Post-order traversal(DFS)");
+            PostOrderTraversal(binarySearchTree.Root);
+            Console.WriteLine("-------------------");
+
+            Console.WriteLine("Level-order traversal(BFS)");
+            LevelOrderTraversal(binarySearchTree.Root);
+            Console.WriteLine("-------------------");
         }
 
-        public static void Traverse(BinaryNode<int> node)
+        public static void PreOrderTraversal<T>(BinaryNode<T> node) where T: IComparable
         {
             if (node == null)
             {
                 return;
             }
             Console.WriteLine(node.Value);
-            Traverse(node.Left);
-            Traverse(node.Right);
+            PreOrderTraversal(node.Left);
+            PreOrderTraversal(node.Right);
+        }
+
+        public static void InOrderTraversal<T>(BinaryNode<T> node) where T : IComparable
+        {
+            if (node == null)
+            {
+                return;
+            }
+            InOrderTraversal(node.Left);
+            Console.WriteLine(node.Value);
+            InOrderTraversal(node.Right);
+        }
+
+        public static void PostOrderTraversal<T>(BinaryNode<T> node) where T : IComparable
+        {
+            if (node == null)
+            {
+                return;
+            }
+            PostOrderTraversal(node.Left);
+            PostOrderTraversal(node.Right);
+            Console.WriteLine(node.Value);
+        }
+
+        public static void LevelOrderTraversal<T>(BinaryNode<T> node) where T : IComparable
+        {
+            Queue<BinaryNode<T>> queue = new Queue<BinaryNode<T>>();
+            HashSet<BinaryNode<T>> visited = new HashSet<BinaryNode<T>>();
+            queue.Enqueue(node);
+            visited.Add(node);
+            while (queue.Count > 0)
+            {
+                BinaryNode<T> currNode = queue.Dequeue();
+                if (!visited.Contains(currNode.Left) && currNode.Left != null)
+                {
+                    visited.Add(currNode.Left);
+                    queue.Enqueue(currNode.Left);
+                }
+                if (!visited.Contains(currNode.Right) && currNode.Right != null)
+                {
+                    visited.Add(currNode.Right);
+                    queue.Enqueue(currNode.Right);
+                }
+                Console.WriteLine(currNode.Value);
+            }
         }
     }
 }
