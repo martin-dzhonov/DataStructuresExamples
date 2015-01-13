@@ -1,0 +1,6 @@
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Trees\bin\Debug\Trees.exe.config
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Trees\obj\Debug\Trees.csprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Trees\bin\Debug\Trees.exe
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Trees\bin\Debug\Trees.pdb
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Trees\obj\Debug\Trees.exe
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Trees\obj\Debug\Trees.pdb
