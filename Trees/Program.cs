@@ -11,7 +11,6 @@ namespace Trees
         static void Main(string[] args)
         {
             BinarySearchTree<string> binarySearchTree = new BinarySearchTree<string>();
-
             binarySearchTree.Insert("F");
             binarySearchTree.Insert("B");
             binarySearchTree.Insert("G");
@@ -23,6 +22,7 @@ namespace Trees
             binarySearchTree.Insert("H");
             //tree pic: http://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg
 
+            Console.WriteLine("BINARY TREE");
             Console.WriteLine("Pre-order traversal(DFS)");
             PreOrderTraversal(binarySearchTree.Root);
             Console.WriteLine("-------------------");
@@ -37,6 +37,22 @@ namespace Trees
 
             Console.WriteLine("Level-order traversal(BFS)");
             LevelOrderTraversal(binarySearchTree.Root);
+            Console.WriteLine("-------------------");
+
+            AVLTree<string> avlTree = new AVLTree<string>();
+            avlTree.Insert("A");
+            avlTree.Insert("B");
+            avlTree.Insert("C");
+            avlTree.Insert("D");
+            avlTree.Insert("E");
+            avlTree.Insert("F");
+            avlTree.Insert("G");
+            avlTree.Insert("H");
+            avlTree.Insert("I");
+
+            Console.WriteLine("\nAVL TREE");
+            Console.WriteLine("Level-order traversal(BFS)");
+            LevelOrderTraversal(avlTree.Root);
             Console.WriteLine("-------------------");
         }
 
@@ -82,6 +98,7 @@ namespace Trees
             while (queue.Count > 0)
             {
                 BinaryNode<T> currNode = queue.Dequeue();
+                visited.Remove(currNode);
                 if (!visited.Contains(currNode.Left) && currNode.Left != null)
                 {
                     visited.Add(currNode.Left);
