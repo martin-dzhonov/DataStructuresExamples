@@ -20,24 +20,20 @@ namespace Trees
             binarySearchTree.Insert("C");
             binarySearchTree.Insert("E");
             binarySearchTree.Insert("H");
-            //tree pic: http://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg
+            //pic: http://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg
 
             Console.WriteLine("BINARY TREE");
-            Console.WriteLine("Pre-order traversal(DFS)");
+            Console.WriteLine("\nPre-order traversal(DFS)");
             PreOrderTraversal(binarySearchTree.Root);
-            Console.WriteLine("-------------------");
 
-            Console.WriteLine("In-order traversal(DFS)");
+            Console.WriteLine("\nIn-order traversal(DFS)");
             InOrderTraversal(binarySearchTree.Root);
-            Console.WriteLine("-------------------");
 
-            Console.WriteLine("Post-order traversal(DFS)");
+            Console.WriteLine("\nPost-order traversal(DFS)");
             PostOrderTraversal(binarySearchTree.Root);
-            Console.WriteLine("-------------------");
 
-            Console.WriteLine("Level-order traversal(BFS)");
+            Console.WriteLine("\nLevel-order traversal(BFS)");
             LevelOrderTraversal(binarySearchTree.Root);
-            Console.WriteLine("-------------------");
 
             AVLTree<string> avlTree = new AVLTree<string>();
             avlTree.Insert("A");
@@ -51,10 +47,10 @@ namespace Trees
             avlTree.Insert("I");
 
             Console.WriteLine("\nAVL TREE");
-            Console.WriteLine("Level-order traversal(BFS)");
+            Console.WriteLine("\nLevel-order traversal(BFS)");
             LevelOrderTraversal(avlTree.Root);
-            Console.WriteLine("-------------------");
 
+            Console.WriteLine("\nBINARY HEAP");
             BinaryHeap<int> binaryHeap = new BinaryHeap<int>(Comparer<int>.Create(new Comparison<int>(MaxIntCompare)));
             binaryHeap.Insert(1);
             binaryHeap.Insert(2);
@@ -65,9 +61,14 @@ namespace Trees
             binaryHeap.Insert(25);
             binaryHeap.Insert(36);
             binaryHeap.Insert(100);
-            binaryHeap.Pop();
+            //pic: http://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg
+
             Console.WriteLine();
-            
+            Console.WriteLine("Heap root: " + binaryHeap.Peek());
+            Console.WriteLine("Root popped: " + binaryHeap.Pop());
+            Console.WriteLine("New root: " + binaryHeap.Peek());
+
+            Trie<string> asd = new Trie<string>();
         }
 
         public static void PreOrderTraversal<T>(BinaryNode<T> node) where T: IComparable<T>
