@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trees
 {
-    public class AVLTree<T> where T : IComparable
+    public class AVLTree<T> where T : IComparable<T>
     {
         public BinaryNode<T> Root { get; set; }
 

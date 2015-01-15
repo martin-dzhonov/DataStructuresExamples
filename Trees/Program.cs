@@ -54,9 +54,23 @@ namespace Trees
             Console.WriteLine("Level-order traversal(BFS)");
             LevelOrderTraversal(avlTree.Root);
             Console.WriteLine("-------------------");
+
+            BinaryHeap<int> binaryHeap = new BinaryHeap<int>(Comparer<int>.Create(new Comparison<int>(MaxIntCompare)));
+            binaryHeap.Insert(1);
+            binaryHeap.Insert(2);
+            binaryHeap.Insert(3);
+            binaryHeap.Insert(7);
+            binaryHeap.Insert(17);
+            binaryHeap.Insert(19);
+            binaryHeap.Insert(25);
+            binaryHeap.Insert(36);
+            binaryHeap.Insert(100);
+            binaryHeap.Pop();
+            Console.WriteLine();
+            
         }
 
-        public static void PreOrderTraversal<T>(BinaryNode<T> node) where T: IComparable
+        public static void PreOrderTraversal<T>(BinaryNode<T> node) where T: IComparable<T>
         {
             if (node == null)
             {
@@ -67,7 +81,7 @@ namespace Trees
             PreOrderTraversal(node.Right);
         }
 
-        public static void InOrderTraversal<T>(BinaryNode<T> node) where T : IComparable
+        public static void InOrderTraversal<T>(BinaryNode<T> node) where T : IComparable<T>
         {
             if (node == null)
             {
@@ -78,7 +92,7 @@ namespace Trees
             InOrderTraversal(node.Right);
         }
 
-        public static void PostOrderTraversal<T>(BinaryNode<T> node) where T : IComparable
+        public static void PostOrderTraversal<T>(BinaryNode<T> node) where T : IComparable<T>
         {
             if (node == null)
             {
@@ -89,7 +103,7 @@ namespace Trees
             Console.WriteLine(node.Value);
         }
 
-        public static void LevelOrderTraversal<T>(BinaryNode<T> node) where T : IComparable
+        public static void LevelOrderTraversal<T>(BinaryNode<T> node) where T : IComparable<T>
         {
             Queue<BinaryNode<T>> queue = new Queue<BinaryNode<T>>();
             HashSet<BinaryNode<T>> visited = new HashSet<BinaryNode<T>>();
@@ -111,6 +125,19 @@ namespace Trees
                 }
                 Console.WriteLine(currNode.Value);
             }
+        }
+
+        public static int MaxIntCompare(int first, int second)
+        {
+            if (first < second)
+            {
+                return 1;
+            }
+            else if (first > second)
+            {
+                return -1;
+            }
+            return 0;
         }
     }
 }

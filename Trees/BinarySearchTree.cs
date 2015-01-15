@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trees
 {
-    public class BinarySearchTree<T> where T : IComparable
+    public class BinarySearchTree<T> where T : IComparable<T>
     {
         public BinaryNode<T> Root { get; set; }
 
