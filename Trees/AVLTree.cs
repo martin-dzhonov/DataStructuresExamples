@@ -8,8 +8,9 @@ namespace Trees
 {
     public class AVLTree<T> where T : IComparable<T>
     {
+        //TODO: Add Remove() method
         public BinaryNode<T> Root { get; set; }
-
+        
         public AVLTree()
         {
 
