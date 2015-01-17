@@ -8,7 +8,6 @@ namespace Trees
 {
     public class AVLTree<T> where T : IComparable<T>
     {
-        //TODO: Add Remove() method
         public BinaryNode<T> Root { get; set; }
         
         public AVLTree()
@@ -27,6 +26,12 @@ namespace Trees
             {
                 this.Root = this.RecursiveInsert(this.Root, newItem);
             }
+        }
+
+        public void Delete(T value)
+        {
+            //TODO: Add Remove() method
+            throw new NotImplementedException();
         }
 
         private BinaryNode<T> RecursiveInsert(BinaryNode<T> node, BinaryNode<T> newNode)

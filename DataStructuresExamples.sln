@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees", "Trees\Trees.csproj", "{111DD265-D9CC-4EFF-BBD3-B4E9254C0363}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashes", "Hashes\Hashes.csproj", "{8B25FB41-BBE2-4B09-900B-75F1E25C77C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{111DD265-D9CC-4EFF-BBD3-B4E9254C0363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{111DD265-D9CC-4EFF-BBD3-B4E9254C0363}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{111DD265-D9CC-4EFF-BBD3-B4E9254C0363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B25FB41-BBE2-4B09-900B-75F1E25C77C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B25FB41-BBE2-4B09-900B-75F1E25C77C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B25FB41-BBE2-4B09-900B-75F1E25C77C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B25FB41-BBE2-4B09-900B-75F1E25C77C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

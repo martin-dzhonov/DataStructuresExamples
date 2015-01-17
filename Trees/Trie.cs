@@ -8,6 +8,8 @@ namespace Trees
 {
     public class Trie<T> where T:class
     {
+        //TODO: Finish
+
         public TrieNode<T> Root { get; private set; }
         public Trie()
         {

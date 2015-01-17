@@ -8,8 +8,6 @@ namespace Trees
 {
     public class BinarySearchTree<T> where T : IComparable<T>
     {
-        //TODO: Add Remove() method
-
         public BinaryNode<T> Root { get; set; }
 
         public BinarySearchTree() { }
@@ -36,5 +34,10 @@ namespace Trees
             return this.Root.Search(value);
         }
 
+        public bool Delete(T value)
+        {
+            //TODO: Finish
+            throw new NotImplementedException();
+        }
     }
 }
