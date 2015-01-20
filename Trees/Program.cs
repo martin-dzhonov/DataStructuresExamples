@@ -68,10 +68,22 @@ namespace Trees
             Console.WriteLine("Root popped: " + binaryHeap.Pop());
             Console.WriteLine("New root: " + binaryHeap.Peek());
 
-            Trie<string> asd = new Trie<string>();
+            Trie trieDS = new Trie();
+            TrieNode rootNode = new TrieNode();
+            rootNode = trieDS.CreateNode();
+            trieDS.AddWord("Name One", rootNode, "1");
+            trieDS.AddWord("Name Two", rootNode, "2");
+            trieDS.AddWord("asdf", rootNode, "4");
+            Console.WriteLine();
+           // TrieNode matchedNode = trieDS.GetMatchedNode("Name", rootNode);
+            List<string> asdf =  trieDS.GetAutoCompleteList(rootNode, "Name", new List<string>());
+            for (int i = 0; i < asdf.Count; i++)
+            {
+                Console.WriteLine(asdf[i]);
+            }
         }
 
-        public static void PreOrderTraversal<T>(BinaryNode<T> node) where T: IComparable<T>
+        public static void PreOrderTraversal<T>(BinaryNode<T> node) where T : IComparable<T>
         {
             if (node == null)
             {
