@@ -1,0 +1,6 @@
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\LinkedList\bin\Debug\LinkedList.exe.config
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\LinkedList\obj\Debug\LinkedList.exe
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\LinkedList\obj\Debug\LinkedList.pdb
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\LinearDataStuctures\bin\Debug\LinkedList.exe.config
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\LinearDataStuctures\obj\Debug\LinkedList.exe
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\LinearDataStuctures\obj\Debug\LinkedList.pdb

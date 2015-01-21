@@ -36,10 +36,10 @@ namespace Trees
             return wordList;
         }
 
-        private TrieNode GetMatchedNode(string prefix)
+        private TrieNode GetMatchedNode(string word)
         {
             var node = this.Root;
-            foreach (char ch in prefix)
+            foreach (char ch in word)
             {
                 if (node.ContainsKey(ch))
                 {

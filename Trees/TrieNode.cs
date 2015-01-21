@@ -43,7 +43,9 @@ namespace Trees
             foreach (TrieNode node in Values)
             {
                 if (node.EndsWord)
+                {
                     wordList.Add(node.ToString());
+                }
 
                 node.ToList(ref wordList);
             }
