@@ -1,0 +1,6 @@
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Graphs\bin\Debug\Graphs.exe.config
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Graphs\obj\Debug\Graphs.csprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Graphs\bin\Debug\Graphs.exe
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Graphs\bin\Debug\Graphs.pdb
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Graphs\obj\Debug\Graphs.exe
+C:\Users\Martin\Documents\GitHub\DataStructuresExamples\Graphs\obj\Debug\Graphs.pdb
