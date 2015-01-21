@@ -23,7 +23,7 @@ namespace Trees
             //pic: http://upload.wikimedia.org/wikipedia/commons/d/d4/Sorted_binary_tree_preorder.svg
 
             Console.WriteLine("BINARY TREE");
-            Console.WriteLine("\nPre-order traversal(DFS)");
+            Console.WriteLine("Pre-order traversal(DFS)");
             PreOrderTraversal(binarySearchTree.Root);
 
             Console.WriteLine("\nIn-order traversal(DFS)");
@@ -47,7 +47,7 @@ namespace Trees
             avlTree.Insert("I");
 
             Console.WriteLine("\nAVL TREE");
-            Console.WriteLine("\nLevel-order traversal(BFS)");
+            Console.WriteLine("Level-order traversal(BFS)");
             LevelOrderTraversal(avlTree.Root);
 
             Console.WriteLine("\nBINARY HEAP");
@@ -63,23 +63,23 @@ namespace Trees
             binaryHeap.Insert(100);
             //pic: http://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg
 
-            Console.WriteLine();
             Console.WriteLine("Heap root: " + binaryHeap.Peek());
             Console.WriteLine("Root popped: " + binaryHeap.Pop());
             Console.WriteLine("New root: " + binaryHeap.Peek());
 
-            Trie trieDS = new Trie();
-            TrieNode rootNode = new TrieNode();
-            rootNode = trieDS.CreateNode();
-            trieDS.AddWord("Name One", rootNode, "1");
-            trieDS.AddWord("Name Two", rootNode, "2");
-            trieDS.AddWord("asdf", rootNode, "4");
-            Console.WriteLine();
-           // TrieNode matchedNode = trieDS.GetMatchedNode("Name", rootNode);
-            List<string> asdf =  trieDS.GetAutoCompleteList(rootNode, "Name", new List<string>());
-            for (int i = 0; i < asdf.Count; i++)
+            Console.WriteLine("\nTRIE");
+            Trie trie = new Trie();
+            trie.Add("test");
+            trie.Add("testing");
+            trie.Add("telling");
+            trie.Add("trying");
+            trie.Add("house");
+            trie.Add("home");
+            string prefix = "te";
+            Console.WriteLine("Search results for: " + prefix);
+            foreach (string word in trie.GetMatchedWords(prefix))
             {
-                Console.WriteLine(asdf[i]);
+                Console.WriteLine(word);
             }
         }
 
