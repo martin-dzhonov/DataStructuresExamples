@@ -1,2 +1,2 @@
 # DataStructuresExamples
-Implementations of most common used data structures
+Implementations of commonly used data structures and algorithms
